@@ -11,6 +11,7 @@ pipeline {
     stage ('test') {
       steps {
         echo 'testing ..'
+        sh 'sudo pip install pytest'
         sh 'pytest -vv'
       }
     }
