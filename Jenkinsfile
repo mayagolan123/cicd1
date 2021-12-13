@@ -9,7 +9,7 @@ pipeline {
     stage ('test') {
       steps {
         echo 'testing ..'
-        sh pytest -vv 
+        sh 'pytest -vv'
       }
     }
   }
