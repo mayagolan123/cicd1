@@ -1,12 +1,17 @@
 pipeline {
-  agent {
-    docker { image 'python:3-slim' }
-  }
-  stages {
-    stage ('Checkout') {
-      steps {
-        git branch: 'main', url: 'https://github.com/mayagolan123/cicd1.git'
-      }
+    agent none
+    stages {
+        stage('Build') {
+            agent {
+                docker {
+                    image 'python:3-alpine'
+                }
+            }
+            steps {
+              sh 'echo hello'
+                }
+            }
+        }
     }
-  }
 }
+
