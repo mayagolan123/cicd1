@@ -6,9 +6,10 @@ pipeline {
         git branch: 'main', url: 'https://github.com/mayagolan123/cicd1.git'
       }
     }
-    stage ('build') {
+    stage ('test') {
       steps {
-        echo 'building ..'
+        echo 'testing ..'
+        sh pytest -vv 
       }
     }
   }
