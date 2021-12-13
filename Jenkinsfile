@@ -1,9 +1,9 @@
 pipeline {
   agent any 
   stages {
-    stage ('checkout') {
+    stage ('Checkout') {
       steps {
-        git branch: 'main', url: 'https://github.com/mayagolan123/cicd1.git'
+        git branch: 'main', url: 'https://github.com/mayagolan123/cicd1'
       }
     }
     stage ('build') {
